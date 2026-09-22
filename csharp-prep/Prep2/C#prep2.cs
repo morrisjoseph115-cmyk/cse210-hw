@@ -21,10 +21,22 @@ class Program
         {
             lettergrade = "C";
         }
+        else if (gradepercent >= 60)
+        {
+            lettergrade = "D";
+        }
         else
         {
             lettergrade = "F";
         }
-        Console.WriteLine($"cool, your grade is a{lettergrade}");
+        Console.WriteLine($"cool, your grade is an : {lettergrade}");
+        if (gradepercent >= 70)
+        {
+            Console.WriteLine($"Congrats you passed! :)");
+        }
+        else
+        {
+            Console.WriteLine($"You Failed, Hope you didn't take out a loan...");
+        }
     }
 }
