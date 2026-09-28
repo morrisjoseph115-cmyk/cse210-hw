@@ -21,17 +21,17 @@ static void Main(string[] args)
     //             Console.WriteLine($"{i} -");
     //             Console.WriteLine("Hey Bob");
 
-            List<string> myFriends = ["peter, james, john"];
-           // List<string> names = new List<string>();
-            //myFriends.Add("joe");
-            //myFriends.Add("mike");
+    //List<string> myFriends = ["peter, james, john"];
+    // List<string> names = new List<string>();
+    //myFriends.Add("joe");
+    //myFriends.Add("mike");
 
-            //foreach(string name in myFriends)
-        //{
-           // Console.WriteLine(name);
-        //}
+    //foreach(string name in myFriends)
+    //{
+    // Console.WriteLine(name);
+    //}
 
+    
 
-         }
     }
 }
