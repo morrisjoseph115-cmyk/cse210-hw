@@ -26,5 +26,13 @@ class Program
 
         job1.Display();
         job2.Display();
+
+        Resume myResume = new Resume();
+
+        myResume._name = "Your Name";
+        myResume._jobs.Add(job1);
+        myResume._jobs.Add(job2);
+
+        Console.WriteLine(myResume._jobs[0]._jobTitle);
     }
 }
