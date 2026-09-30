@@ -6,14 +6,14 @@ class Program
     {
         Console.WriteLine("program launched");
 
-        Job Job1 = new Job();
+        Job job1 = new Job();
 
-        Job1._company = "Microshaft";
-        Job1._jobTitle = "Software Engineer";
-        Job1._startYear = 2019;
-        Job1._endYear = 2022;
+        job1._company = "Microshaft";
+        job1._jobTitle = "Software Engineer";
+        job1._startYear = 2019;
+        job1._endYear = 2022;
 
-        Console.WriteLine(Job1._company);
+        //Console.WriteLine(Job1._company);
 
         Job job2 = new Job();
 
@@ -22,6 +22,9 @@ class Program
         job2._startYear = 2022;
         job2._endYear = 2023;
 
-        Console.WriteLine(job2._company);
+        //Console.WriteLine(job2._company);
+
+        job1.Display();
+        job2.Display();
     }
 }
