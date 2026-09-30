@@ -6,12 +6,17 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Program Launched");
+
         DisplayWelcome();
+
         string userName = PromptUserName();
         int userNumber = PromptUserNumber();
+
         int birthYear;
         PromptUserBirthYear(out birthYear);
+
         int squaredNumber = SquareNumber(userNumber);
+        DisplayResult(userName, squaredNumber, birthYear);
     }
 
     static void DisplayWelcome()
@@ -49,6 +54,10 @@ class Program
 
     static void DisplayResult(string name, int squaredNumber, int birthYear)
     {
-        
+        int currentYear = DateTime.Now.Year;
+        int age = currentYear - birthYear;
+
+        Console.WriteLine($"{name}, the square of your number is {squaredNumber} ");
+        Console.WriteLine($"{name}, you will turn {age} this year.");
     }
 }
