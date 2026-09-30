@@ -30,6 +30,17 @@ class Program
 
         double average = (double)sum / numbers.Count;
         Console.WriteLine($"The average of the numbers is: {average}");
+
+        int largest = numbers[0];
+
+        foreach (int value in numbers)
+            {
+                if (value > largest)
+                {
+                    largest = value;
+                }
+            }
+        Console.WriteLine($"The largest number in list is : {largest}");
         }
     }
 }
