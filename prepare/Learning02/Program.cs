@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("program launched");
+        //Console.WriteLine("program launched");
 
         Job job1 = new Job();
 
@@ -24,8 +24,8 @@ class Program
 
         //Console.WriteLine(job2._company);
 
-        job1.Display();
-        job2.Display();
+        //job1.Display();
+        //job2.Display();
 
         Resume myResume = new Resume();
 
@@ -33,6 +33,8 @@ class Program
         myResume._jobs.Add(job1);
         myResume._jobs.Add(job2);
 
-        Console.WriteLine(myResume._jobs[0]._jobTitle);
+        myResume.Display();
+
+        //Console.WriteLine(myResume._jobs[0]._jobTitle);
     }
 }
