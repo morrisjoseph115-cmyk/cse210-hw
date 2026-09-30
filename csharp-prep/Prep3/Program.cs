@@ -6,5 +6,22 @@ class Program
     {
         Random randomGenerator = new Random();
         int magicNumber = randomGenerator.Next(1,101);
+
+        int guess = -1;
+
+        while (guess != magicNumber)
+        {
+            Console.Write("What number 1~100 do you guess?");
+            guess = int.Parse(Console.ReadLine());
+
+            if (guess < magicNumber)
+            {
+                Console.WriteLine("Nope, Higher");
+            }
+            else if (guess > magicNumber)
+            {
+                Console.WriteLine("Nope, Lower!");
+            }
+        }
     }
 }
