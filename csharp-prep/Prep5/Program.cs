@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 
 class Program
 {
@@ -7,6 +8,7 @@ class Program
         Console.WriteLine("Program Launched");
         DisplayWelcome();
         string userName = PromptUserName();
+        int userNumber = PromptUserNumber();
     }
 
     static void DisplayWelcome()
@@ -24,7 +26,10 @@ class Program
 
     static int PromptUserNumber()
     {
-        
+        Console.Write("Enter user number: ");
+        int number = int.Parse(Console.ReadLine());
+
+        return number;
     }
 
     static void PromptUserBirthYear(out int birthYear)
