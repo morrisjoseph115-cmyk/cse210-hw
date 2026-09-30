@@ -27,6 +27,9 @@ class Program
         }
 
             Console.WriteLine($"The total sum is: {sum}");
+
+        double average = (double)sum / numbers.Count;
+        Console.WriteLine($"The average of the numbers is: {average}");
         }
     }
 }
