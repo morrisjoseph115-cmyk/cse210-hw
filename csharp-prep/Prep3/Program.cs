@@ -22,6 +22,10 @@ class Program
             {
                 Console.WriteLine("Nope, Lower!");
             }
+            else
+            {
+                Console.WriteLine("You GOT IT! Good Guess!");
+            }
         }
     }
 }
