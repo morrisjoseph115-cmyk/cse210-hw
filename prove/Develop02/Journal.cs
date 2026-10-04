@@ -8,7 +8,7 @@ public class Journal
         _entries.Add(entry);
     }
 
-    public void DisplayAll();
+    public void DisplayAll()
     {
         // display all of our collected entries
         foreach (Entry entry in _entries)

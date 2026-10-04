@@ -1,4 +1,4 @@
-using System.Diagnostics.Contracts;
+
 
 public class Entry
 {
@@ -8,7 +8,7 @@ public class Entry
     public string _entryText;
     public string _mood;
 
-    public void display ()
+    public void Display ()
     {
         // where we will display the journal entry inside the terminal.
         Console.WriteLine($"Date : {_date} - Mood: {_mood}");
