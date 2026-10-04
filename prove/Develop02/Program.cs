@@ -1,3 +1,7 @@
+// EXCEEDING REQUIREMENTS:
+// I managed to get the journal to also keep the mood of the user when entered.
+// The mood is displayed with each entry and is saved with each file export. Interesting stuff.
+
 using System;
 using System.Xml.Serialization;
 class Program
