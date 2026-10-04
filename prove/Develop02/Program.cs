@@ -89,6 +89,7 @@ class Program
                 string filename = Console.ReadLine();                            // makes a string, then uses the return from the console to give the filename.
 
                 journal.SavetoFile(filename);                                    // runs our function... or tries to.
+                Console.WriteLine($"Saved to Path: {Path.GetFullPath(filename)}");
 
 
             }
