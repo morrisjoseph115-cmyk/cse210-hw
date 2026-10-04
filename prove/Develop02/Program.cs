@@ -47,7 +47,9 @@ class Program
                     "Did I truly do my best today? Go that extra mile?",
                 };
 
-                Random random = new Random();
+                // this is where the magic prompt pulls happen. this is interesting. lol
+
+                Random random = new Random();   
                 int promptIndex = random.Next(prompts.Count);
                 string prompt = prompts[promptIndex];
 
