@@ -39,7 +39,7 @@ public class Journal
         // load entries... this is going to be interesting.
         // we use ReadAllLines for this and we also use string manipulation.
 
-        _entries.Clear();
+        _entries.Clear();  // this is critical, we are replacing the current journal entry, and not appending it.
 
         string[] lines = File.ReadAllLines(file);
 
