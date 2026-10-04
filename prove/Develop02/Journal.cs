@@ -11,6 +11,10 @@ public class Journal
     public void DisplayAll();
     {
         // display all of our collected entries
+        foreach (Entry entry in _entries)
+        {
+            entry.Display();
+        }
     }
 
     public void SavetoFile(string file)
