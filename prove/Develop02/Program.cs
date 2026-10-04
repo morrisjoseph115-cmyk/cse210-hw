@@ -78,7 +78,15 @@ class Program
 
             else if (choice == 3)
             {
-                Console.WriteLine("Load selected...");
+                //Console.WriteLine("Load selected...");
+                //Actually uses the retreived file.
+                
+                Console.Write("Enter the file path or filename to load from:");
+                Console.Write("Note this is also case and pathing sensitive...");
+
+                string filename = Console.ReadLine();
+
+                journal.LoadFromFile(filename);
             }
 
             else if (choice == 4)
