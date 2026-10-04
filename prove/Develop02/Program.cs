@@ -87,6 +87,7 @@ class Program
                 string filename = Console.ReadLine();
 
                 journal.LoadFromFile(filename);
+                Console.WriteLine($"File loaded successfully!");
             }
 
             else if (choice == 4)
@@ -112,6 +113,8 @@ class Program
                 journal.SavetoFile(filename);
 
                 Console.WriteLine($"Journal entry saved to : {Path.GetFullPath(filename)}");
+                Console.WriteLine($"File written successfully!");
+
 
             }
         }
