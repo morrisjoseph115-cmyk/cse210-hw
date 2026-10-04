@@ -63,7 +63,12 @@ class Program
                 Entry  newEntry = new Entry();
 
                 newEntry._date = date;
-                
+                newEntry._promptText = prompt;
+                newEntry._entryText = response;
+                newEntry._mood = mood;
+
+                journal.AddEntry(newEntry);
+
             }
 
             else if (choice == 2)
