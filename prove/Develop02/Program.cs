@@ -83,7 +83,14 @@ class Program
 
             else if (choice == 4)
             {
-                Console.WriteLine("Save selected...");
+                // Console.WriteLine("Save selected..."); We are going to do something more refined with this soon.
+
+                Console.WriteLine("What filename would you like to save to? :"); // gives the new prompt
+                string filename = Console.ReadLine();                            // makes a string, then uses the return from the console to give the filename.
+
+                journal.SavetoFile(filename);                                    // runs our function... or tries to.
+
+
             }
         }
 
