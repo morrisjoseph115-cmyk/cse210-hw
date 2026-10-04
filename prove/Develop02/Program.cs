@@ -83,14 +83,27 @@ class Program
 
             else if (choice == 4)
             {
-                // Console.WriteLine("Save selected..."); We are going to do something more refined with this soon.
 
-                Console.WriteLine("What filename would you like to save to? :"); // gives the new prompt
-                string filename = Console.ReadLine();                            // makes a string, then uses the return from the console to give the filename.
 
-                journal.SavetoFile(filename);                                    // runs our function... or tries to.
-                Console.WriteLine($"Saved to Path: {Path.GetFullPath(filename)}");
+                // ---------------------------------------------------------------------------------------------------------------------------------------
+                //Console.WriteLine("Save selected..."); We are going to do something more refined with this soon.
 
+                //Console.WriteLine("What filename would you like to save to? :"); // gives the new prompt
+                //string filename = Console.ReadLine();                            // makes a string, then uses the return from the console to give the filename.
+
+                //journal.SavetoFile(filename);                                    // runs our function... or tries to.
+                //Console.WriteLine($"Saved to Path: {Path.GetFullPath(filename)}");
+                // ---------------------------------------------------------------------------------------------------------------------------------------
+
+
+                // made some changes here, thought it would be a good idea to set the path for the file to be saved. kinda lost it in the debug folder.
+                // it was hiding inside a dotfile and thats not easy to look at. so I made changes...
+                Console.Write("Enter the file path or the filename to save to: ");
+                string filename = Console.ReadLine();
+
+                journal.SavetoFile(filename);
+
+                Console.WriteLine($"Journal entry saved to : {Path.GetFullPath(filename)}");
 
             }
         }
