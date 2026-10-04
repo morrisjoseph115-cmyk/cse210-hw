@@ -5,6 +5,7 @@ public class journal
     public void AddEntry(Entry entry)
     {
         // where we are to add the entry to our list. kind of like append in python, etc.
+        _entries.Add(entry);
     }
 
     public void DisplayAll();
