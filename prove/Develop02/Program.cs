@@ -25,6 +25,8 @@ class Program
             Console.WriteLine("3. Load");
             Console.WriteLine("4. Save");
             Console.WriteLine("5. Quit");
+
+            Console.WriteLine(">");
             
             // left these in for tinkering later, this is really cool, lol!
             // Console.WriteLine("");
