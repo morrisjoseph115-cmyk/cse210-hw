@@ -5,7 +5,18 @@ public class Cipher
     public string Encrypt(string text)
     {
         //encryption logic..... >:)
-        return text;
+         string encrypted = "";
+
+         for (int i = 0; i < text.Length; i++)
+        {
+            char letter = text[1];
+            {
+                int position = letter -'A';
+                int shifted = (position + 3) % 26;
+                encrypted = (char)(shifted + 'A');
+            }
+            return encrypted;
+        }
     }
 
     public string Decrypt(string text)
