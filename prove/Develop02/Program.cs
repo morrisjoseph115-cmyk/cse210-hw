@@ -8,13 +8,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Cipher cipher = new Cipher();
-
-        string encrypted = cipher.Encrypt("Hello World!");
-        string decrypted = cipher.Decrypt(encrypted);
-
-        Console.WriteLine(encrypted);
-        Console.WriteLine(decrypted);
+        
         Journal journal = new Journal();
         int choice = 0;
 

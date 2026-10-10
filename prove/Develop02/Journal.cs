@@ -1,50 +1,71 @@
 using System.IO;
-public class Journal
 
+public class Journal
 {
     public List<Entry> _entries = new List<Entry>();
 
+    // Cipher object for encrypting and decrypting journal files.
+    private Cipher _cipher = new Cipher();
+
     public void AddEntry(Entry entry)
     {
-        // where we are to add the entry to our list. kind of like append in python, etc.
+        // Add an entry to our list.
         _entries.Add(entry);
     }
 
     public void DisplayAll()
     {
-        // display all of our collected entries
+        // Display all collected entries.
         foreach (Entry entry in _entries)
         {
             entry.Display();
         }
     }
 
-    public void SavetoFile(string file)
+    public void SavetoFile(string file, bool encrypt = true)
     {
-        // save entries method. 
+        // Save entries with optional Caesar encryption.
 
         using (StreamWriter outputFile = new StreamWriter(file))
         {
+            if (encrypt)
+            {
+                outputFile.WriteLine("#CAESAR3");
+            }
+
             foreach (Entry entry in _entries)
             {
-                outputFile.WriteLine(
-                    $"{entry._date}~|~{entry._mood}~|~{entry._promptText}~|~{entry._entryText}"
-                );
+                string line = $"{entry._date}~|~{entry._mood}~|~{entry._promptText}~|~{entry._entryText}";
+
+                if (encrypt)
+                {
+                    line = _cipher.Encrypt(line);
+                }
+
+                outputFile.WriteLine(line);
             }
         }
     }
 
     public void LoadFromFile(string file)
     {
-        // load entries... this is going to be interesting.
-        // we use ReadAllLines for this and we also use string manipulation.
+        // Load entries and automatically decrypt when necessary.
 
-        _entries.Clear();  // this is critical, we are replacing the current journal entry, and not appending it.
+        _entries.Clear();
 
         string[] lines = File.ReadAllLines(file);
 
-        foreach (string line in lines)
+        bool encrypted = lines.Length > 0 && lines[0] == "#CAESAR3";
+
+        for (int i = encrypted ? 1 : 0; i < lines.Length; i++)
         {
+            string line = lines[i];
+
+            if (encrypted)
+            {
+                line = _cipher.Decrypt(line);
+            }
+
             string[] parts = line.Split("~|~");
 
             Entry entry = new Entry();
