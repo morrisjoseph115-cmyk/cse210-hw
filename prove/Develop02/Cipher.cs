@@ -9,14 +9,15 @@ public class Cipher
 
          for (int i = 0; i < text.Length; i++)
         {
-            char letter = text[1];
+            char letter = text[i];
             {
-                int position = letter -'A';
-                int shifted = (position + 3) % 26;
-                encrypted = (char)(shifted + 'A');
+                int position = char.ToUpper(letter) -'A';
+                int shifted = (position + _shift) % 26;
+                encrypted += (char)(shifted + 'A');
             }
-            return encrypted;
+            
         }
+        return encrypted;
     }
 
     public string Decrypt(string text)
