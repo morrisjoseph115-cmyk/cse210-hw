@@ -13,17 +13,17 @@ public class Cipher
         {
             char letter = text[i];
             {
-                bool notaletter;
-                notaletter = Char.IsLetter(letter);
+                bool isletter;
+                isletter = Char.IsLetter(letter);
                 
-                if (notaletter == false)
+                if (isletter == false)
 
                 {
                     encrypted += letter;
                 }
 
-                if (notaletter == true)
-                
+                else
+
                 {
                 int position = char.ToUpper(letter) -'A';
                 int shifted = (position + _shift) % 26;
