@@ -1,6 +1,6 @@
 public class Cipher
 {
-    private int_shift = 3;
+    private int _shift = 3;
 
     public string Encrypt(string text)
     {
