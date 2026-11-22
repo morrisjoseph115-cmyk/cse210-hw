@@ -1,9 +1,10 @@
 using System;
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello Develop05 World!");
-    }
-}
+SimpleGoal testGoal = new SimpleGoal(
+    "Finish Homework",
+    "Complete CSE 210 assignment",
+    500
+);
+
+Console.WriteLine(testGoal.RecordEvent());
+Console.WriteLine(testGoal.RecordEvent());
